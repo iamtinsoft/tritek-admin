@@ -1,21 +1,19 @@
-import { Link } from "@chakra-ui/react/link";
-
-import LucideDynamicIcon from "./lucide-dynamic-icons";
+import { Link } from "react-router-dom";
+//import LucideDynamicIcon from "./lucide-dynamic-icons";
 import { Button } from "@chakra-ui/react";
 
 const SidebarLink = ({ title, icon, url }: any) => {
+  console.log(icon, url);
   return (
     <Button
       as={Link}
       className="w-full justify-start mb-2"
       color="default"
-      href={url}
-      radius="sm"
       size="lg"
       // startContent={<LucideDynamicIcon color={"black"} name={icon} size={20} />}
       style={{ fontWeight: 500 }}
     >
-      <LucideDynamicIcon color={"black"} name={icon} size={20} />
+      {/* <LucideDynamicIcon color={"black"} name={icon} size={20} /> */}
       {title}
     </Button>
   );
